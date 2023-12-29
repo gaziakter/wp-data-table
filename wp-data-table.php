@@ -22,3 +22,22 @@
     load_textdomain( "data-table", false, dirname(__FILE__)."/languages" );
  }
  add_action( "plugins_loaded", "wdtable_textdomain" );
+
+ /**
+  * Creation admin menu
+  */
+ function wdtable_admin_menu(){
+    add_menu_page(
+        __('Data Table', 'data-table'),
+        __('Data Table', 'data-table'),
+        'manage_options',
+        'datatable',
+        'wdtable_display_table'
+    );
+
+    function wdtable_display_table(){
+        echo "<h2>Data Table</h2>";
+    }
+
+ }
+ add_action('admin_menu', 'wdtable_admin_menu');
