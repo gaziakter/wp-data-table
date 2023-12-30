@@ -43,7 +43,17 @@
         $table = new Persons_Table();
         $table->set_data($data);
         $table->prepare_items();
-        $table->display();
+        ?>
+        <div class="wrap">
+            <h2><?php _e("Persons", "data-table"); ?></h2>
+            <form>
+                <?php
+                    $table->search_box('search', 'search_id');
+                    $table->display();
+                ?>
+            </form>
+        </div>
+        <?php
     }
 
  }
