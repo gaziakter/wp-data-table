@@ -15,6 +15,9 @@
  * Domain Path:       /languages
  */
 
+ include_once "class.persons-table.php";
+
+
  /**
   * Load textdomain
   */
@@ -36,7 +39,11 @@
     );
 
     function wdtable_display_table(){
-        echo "<h2>Data Table</h2>";
+        include_once "dataset.php";
+        $table = new Persons_Table();
+        $table->set_data($data);
+        $table->prepare_items();
+        $table->display();
     }
 
  }
