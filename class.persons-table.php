@@ -22,6 +22,10 @@ class Persons_Table extends WP_List_Table{
         return "<input type='checkbox' value='{$item['id']}'>";
     }
 
+    function column_email($item){
+        return "<strong>{$item['email']}</strong>";
+    }
+
     function prepare_items(){
         $this->_column_headers = array($this->get_columns());
     }
