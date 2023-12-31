@@ -18,6 +18,10 @@ class Persons_Table extends WP_List_Table{
         ];
     }
 
+    function column_cb($item){
+        return "<input type='checkbox' value='{$item['id']}'>";
+    }
+
     function prepare_items(){
         $this->_column_headers = array($this->get_columns());
     }
