@@ -42,11 +42,5 @@ $data = [
         'email'=>'john@wick.com',
         'age'=>26,
         'sex'=>'M'
-    ],[
-		'id'=>6,
-		'name'=>'Gazi Akter',
-		'email'=>'gazi@doe.com',
-		'age'=>38,
-		'sex'=>'Ml'
-	]
+    ]
 ];
